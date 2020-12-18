@@ -8,9 +8,13 @@ public class Main {
 
         //Implement qilgan class
 
-        Download download = new Download();
+//        Download download = new Download();
+//
+//        download.onFinished();
 
-        download.onFinished();
+
+
+
 
 
     }

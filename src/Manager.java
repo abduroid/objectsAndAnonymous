@@ -30,6 +30,31 @@ public class Manager {
                 System.out.println("Totally not saved anonymous object: "  + hashCode());
             }
         }.onFinished();
+
+
+        System.out.println("---------------");
+        System.out.println("Not interface section");
+
+
+        FetchData fetchData = new FetchData();
+        fetchData.fetch();
+
+        System.out.println();
+        System.out.println("Anonymous one ");
+
+
+        new FetchData() {
+
+            @Override
+            public void fetch() {
+                super.fetch();
+
+                System.out.println("Manager hashCode: " + Manager.this.hashCode());
+                System.out.println("Overriden fetching hashCode: " + hashCode());
+
+            }
+        }.fetch();
+
     }
 
 }
